@@ -7,7 +7,7 @@ public class MyTestingClass {
         this.userCode = userCode;
     }
 
-    8
+
     @Override
     public int hashCode() {
         int result = 13;
