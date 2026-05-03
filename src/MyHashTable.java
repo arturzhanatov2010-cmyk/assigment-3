@@ -1,6 +1,6 @@
 public class MyHashTable<K, V> {
 
-    // Переименовали класс узла в Entry (часто используется в Java)
+
     private class Entry<K, V> {
         K key;
         V value;
@@ -17,8 +17,8 @@ public class MyHashTable<K, V> {
         }
     }
 
-    private Entry<K, V>[] buckets; // Изменили название массива
-    private int numBuckets = 11; // Переименовали M
+    private Entry<K, V>[] buckets;
+    private int numBuckets = 11;
     private int size;
 
     public MyHashTable() {
@@ -48,7 +48,7 @@ public class MyHashTable<K, V> {
             curr = curr.next;
         }
 
-        // Вставляем новый элемент
+
         Entry<K, V> newEntry = new Entry<>(key, value);
         newEntry.next = buckets[index];
         buckets[index] = newEntry;
@@ -115,7 +115,7 @@ public class MyHashTable<K, V> {
         return null;
     }
 
-    // Метод для тестирования (для Part 1.2)
+
     public void showBucketDistribution() {
         for (int i = 0; i < numBuckets; i++) {
             int itemsCount = 0;
